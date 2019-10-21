@@ -1,11 +1,24 @@
 {% extends '_layouts/detail.njk' %}
-{% set book = data.books[1] %}
+{% set members = data.members[0] %}
 
-{% block info %}
-  {{ book.title }}
-{% endblock %}
+{% block content %}
 
-{% block story %}
-  <h2>Undead: Right column content</h2>
-  <p>Zombie ipsum brains reversus ab cerebellum viral inferno, thalamus nam rick mend grimes malum cerveau cerebro.</p>
+<div class="container">
+  <div class="row">
+  {% for member in data.members %}
+    <div class="col-sm">
+      <img src="../img/members/{{ member.image }}">
+      <p class="member-info">{{ member.instruments}}</p>
+      <p class="member-info">{{ member.tenure}}</p>
+      <p class="member-info">{{ member.birthplace}}</p>
+      <p class="member-info">{{ member.birthdate}}</p>
+    </div>
+    <div class="col-sm">
+      <h1 class="member-name">{{ member.name }}</h1>
+      <p class="member-text">{{ member.text }}</p>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
 {% endblock %}
