@@ -1,5 +1,9 @@
 /* nav */
 
 .navbar {
-  margin-bottom: 20px;
+  background-color: opacify($color: #000000, $amount: 0);
+}
+
+.nav-link, .navbar-brand {
+  color: white;
 }
