@@ -1,6 +1,14 @@
 // Custom variable overrides
 // See node_modules/bootstrap/scss/_variables.scss
 
+$link-color: white;
+$dropdown-bg: black;
+$dropdown-link-color: white;
+$dropdown-link-hover-color: none;
+$dropdown-link-hover-bg: none;
+$dropdown-link-active-color: none;
+$dropdown-link-active-bg: none;
+
 // $body-bg: black;
 // $body-color: white;
 // $link-hover-color: grey;
@@ -21,3 +29,13 @@
 // Import partials
 @import "nav";
 @import "jumbotron";
+@import "content";
+
+h1, h2 {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+p {
+  font-family: 'Cormorant Garamond', serif;
+}
+

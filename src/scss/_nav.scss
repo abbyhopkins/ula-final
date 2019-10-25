@@ -1,9 +1,14 @@
 /* nav */
 
-.navbar {
-  background-color: opacify($color: #000000, $amount: 0);
+.dropdown-item:hover {
+color: #8d8d8d;
+background-color: none;
 }
 
-.nav-link, .navbar-brand {
-  color: white;
+.navbar-brand {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.dropdown-item, .nav-link {
+  font-family: 'Cormorant Garamond', serif;
 }

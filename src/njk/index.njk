@@ -5,46 +5,60 @@
 {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>About the Band</h1>
-      <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Queen_(band)" target="blank">Wikipedia</a></p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals) and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
-
-      <p>Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in March 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularise the music video format.</p>
-
-      <p>The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions", which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium rock bands in the world. "Another One Bites the Dust" (1980) became their best-selling single, while their 1981 compilation album Greatest Hits is the best-selling album in the UK and is certified eight times platinum in the US. Their performance at the 1985 Live Aid concert has been ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at Knebworth, England. In 1991, he died of bronchopneumonia - a complication of AIDS, and Deacon retired in 1997. Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert.</p>
-    </div>
-  </div>
-  <div class="card-deck">
-    {% for member in data.members %}
-    <div class="card">
-      <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="band member" class="img-fluid">
-      <div class="card-body">
-        <h5 class="card-title">{{ member.name }}</h5>
-        <p class="card-text">{{ member.instruments }}</p>
-        <a class="card-link btn" href=#>Learn More<a>
+  <section class="about">
+    <div class="row">
+      <div class="col">
+        <h2>About the Band</h2>
+        <p class="source">Source: <a class="source" href="https://en.wikipedia.org/wiki/Queen_(band)" target="blank">Wikipedia</a></p>
       </div>
     </div>
-    {% endfor %}
-  </div>
-  <div class="albums">
-    <ul class="list-unstyled">
-      {% for disc in data.discography %}
-      <li class="media">
-        <img class="img-fluid" src="img/discs/{{ disc.image }}" alt="Album cover">
-        <div class="media-body">
-          <h5 class="mt-0 mb-1">{{ disc.title }}</h5>
-          <p class="album-year">{{ disc.year }}</p>
+    <div class="row">
+      <div class="col">
+        <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals) and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
+  
+        <p>Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in March 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularise the music video format.</p>
+  
+        <p>The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions", which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium rock bands in the world. "Another One Bites the Dust" (1980) became their best-selling single, while their 1981 compilation album Greatest Hits is the best-selling album in the UK and is certified eight times platinum in the US. Their performance at the 1985 Live Aid concert has been ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at Knebworth, England. In 1991, he died of bronchopneumonia - a complication of AIDS, and Deacon retired in 1997. Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert.</p>
+      </div>
+    </div>
+  </section>
+  <section class="member-cards">
+    <h2>Members</h2>
+    <div class="card-deck">
+      {% for member in data.members %}
+      <div class="card text-center">
+        <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="band member" class="img-fluid">
+        <div class="card-body">
+          <h5 class="card-title">{{ member.name }}</h5>
+          <p class="card-text">{{ member.instruments }}</p>
+          <a class="card-link btn" href="{{ member.slug }}.html">Member Bio<a>
         </div>
-      </li>
+      </div>
       {% endfor %}
-    </ul>
-  </div>
+    </div>
+  </section>
+  <section class="music">
+    <div>
+      <h2>Music</h2>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <iframe title="Queen's Billboard Hits" aria-label="Bar Chart" id="datawrapper-chart-ZZDtP" src="//datawrapper.dwcdn.net/ZZDtP/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="568"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
+        </div>
+        <div class="col-sm-12 col-md-6 text-center">
+          <div class="row">
+              {% for disc in data.discography %}
+              <div class="col-sm-6 col-md-4 albums">
+                <img class="img-fluid" src="img/discs/{{ disc.image }}" alt="Album cover">
+                <div class="media-body text-center">
+                  <p class="album-title album-year">{{ disc.title }} – {{ disc.year }}</p>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 {% endblock %}
