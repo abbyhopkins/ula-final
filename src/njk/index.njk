@@ -24,28 +24,35 @@
   </section>
   <section class="member-cards">
     <h2>Members</h2>
-    <div class="card-deck">
-      {% for member in data.members %}
-      <div class="card text-center">
-        <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="band member" class="img-fluid">
-        <div class="card-body">
-          <h5 class="card-title">{{ member.name }}</h5>
-          <p class="card-text">{{ member.instruments }}</p>
-          <a class="card-link btn" href="{{ member.slug }}.html">Member Bio<a>
-        </div>
+    <div class="row">
+      <div class="card-deck text-center">
+        {% for member in data.members %}
+          <div class="col-sm-6 col-lg-3">
+            <div class="card">
+              <img class="card-img-top" src="img/members/{{ member.imagebw }}" alt="band member" class="img-fluid">
+              <div class="card-body">
+                <h5 class="card-title">{{ member.name }}</h5>
+                <p class="card-text">{{ member.instruments }}</p>
+                <a class="card-link btn" href="{{ member.slug }}.html">Member Bio<a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </section>
   <section class="music">
     <div>
       <h2>Music</h2>
       <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 chart">
+          <h4 class="text-center chart-header">| Top Billboard Hits |</h4>
+          <h6 class="text-center chart-header"> By Weeks On Chart </h6>
           <iframe title="Queen's Billboard Hits" aria-label="Bar Chart" id="datawrapper-chart-ZZDtP" src="//datawrapper.dwcdn.net/ZZDtP/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="568"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();</script>
         </div>
         <div class="col-sm-12 col-md-6 text-center">
-          <div class="row">
+          <h4 class="album-heading">| Albums |</h4>
+          <div class="row overflow-auto">
               {% for disc in data.discography %}
               <div class="col-sm-6 col-md-4 albums">
                 <img class="img-fluid" src="img/discs/{{ disc.image }}" alt="Album cover">

@@ -4,37 +4,82 @@
 
 .member-cards {
   margin-top: 50px;
+  .card {
+    margin: 0 5px 15px 5px;
+  }
   .card-title {
     font-family: 'Cinzel Decorative', cursive;
-  }
-  
+    }
   .card-link.btn {
     background-color: black;
     color: white;
     margin-top: 1rem;
     font-family: 'Cormorant Garamond', serif;
   }
-  
   .card-text {
     margin-bottom: 0px;
   }
-  
   .card-link.btn:hover {
     background-color: white;
     color: black;
     border: black 1px solid;
   }
-}  
+}
 
 .music {
   margin-top: 50px;
-  .albums {
-    margin-bottom: 20px;
-  }
   .album-title {
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     margin: 5px auto 1px auto;
   }
+  .chart {
+    margin-bottom: 20px;
+  }
+  .chart-header {
+    margin-bottom: 3px;
+  }
+  .album-heading {
+    margin-bottom: 20px;
+  }
+  .overflow-auto {
+    max-height: 600px;
+  }
+  .overflow-auto::-webkit-scrollbar {
+    width: .5rem;
+  }
+  .overflow-auto::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+  }
+  .overflow-auto::-webkit-scrollbar-track {
+    background: $light;
+    border-radius: 5px
+  }
 }
 
+.left-content {
+  .members-name {
+    font-family: 'Cinzel Decorative', cursive;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px rgb(235, 235, 235) solid;
+  }
+  .members-info {
+    font-family: 'Marcellus', serif;
+    align-content: center;
+    li {
+      padding: 2px 0 2px 40px;
+      list-style: none;
+      background-image: url("../img/q.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 20px;
+    }
+  }
+}
+
+#legal {
+  margin-top: 20px;
+}

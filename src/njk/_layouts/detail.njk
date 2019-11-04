@@ -4,9 +4,9 @@
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-4 left-content">
-      <img src="img/members/{{ members.image }}" alt="band member" class="img-fluid">
-      <h3>About {{ members.name }}</h3>
+    <div class="col-sm-6 col-md-4 left-content">
+      <img src="img/members/{{ members.image }}" alt="band member" class="img-fluid band-member">
+      <h4 class="members-name">About {{ members.name }}</h4>
       <ul class="members-info">
         <li class="members-info">Instruments: {{ members.instruments }}</li>
         <li class="members-info">Tenure: {{ members.tenure }}</li>
@@ -14,7 +14,7 @@
         <li class="members-info">Birthdate: {{ members.birthdate }}</li>
       </ul>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-6 col-md-8">
       <h2>{{ members.name }}</h2>
       <p class="members-text">{{ members.text | safe}}</p>
       <hr>

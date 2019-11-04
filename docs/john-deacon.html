@@ -8,12 +8,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cormorant+Garamond|Marcellus&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top">
-  <a class="navbar-brand" href="index.html">Queen</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+  <a class="navbar-brand" href="index.html">Q</a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -26,6 +26,9 @@
           <a class="dropdown-item" href="john-deacon.html">John Deacon</a>
           <a class="dropdown-item" href="roger-taylor.html">Roger Taylor</a>
         </div>
+      </li>
+      <li>
+        <a class="nav-link" href="media.html">Media</a>
       </li>
     </ul>
   </div>
@@ -41,9 +44,9 @@
   
 <article class="container">
   <div class="row">
-    <div class="col-sm-4 left-content">
-      <img src="img/members/john-deacon-color.jpg" alt="band member" class="img-fluid">
-      <h3>About John Deacon</h3>
+    <div class="col-sm-6 col-md-4 left-content">
+      <img src="img/members/john-deacon-color.jpg" alt="band member" class="img-fluid band-member">
+      <h4 class="members-name">About John Deacon</h4>
       <ul class="members-info">
         <li class="members-info">Instruments: Bass, guitar, keyboards</li>
         <li class="members-info">Tenure: (1971–1997)</li>
@@ -51,7 +54,7 @@
         <li class="members-info">Birthdate: 8/19/1951</li>
       </ul>
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-6 col-md-8">
       <h2>John Deacon</h2>
       <p class="members-text"><p>John Richard Deacon (born 19 August 1951) is an English retired musician, best known for being the bass guitarist for the rock band Queen. He composed several singles for the group—including Top 10 hits "You're My Best Friend", "Another One Bites the Dust", "Back Chat", and "I Want to Break Free"—and was involved in the band's financial management.</p>
 <p>Deacon grew up in Oadby, Leicestershire, playing bass in a local band, The Opposition, before moving to study electronics at Chelsea College, London. He joined Queen in 1971 on the strength of his musical and electronic skills, particularly the home-made Deacy Amp which guitarist Brian May used to create guitar orchestras throughout Queen's career. From the third album, Sheer Heart Attack, onwards, he wrote at least one song per album, several of which became hits. As well as bass, Deacon played some guitar and keyboards on Queen's studio work, but was the only member never to sing on their records, though he did contribute backing vocals during live performances.</p>
@@ -81,13 +84,13 @@
                 if(scroll_pos > 550) {
                     $("nav").css('background-color', 'white');
                     $("nav a").css('color', 'black');
-                    $("nav .dropdown-menu").css('background-color', 'white')
-                    $("nav .dropdown-menu").css('color', 'black')
+                    $("nav .dropdown-menu").css('background-color', 'white');
+                    $("nav .dropdown-menu").css('color', 'black');
                 } else {
                     $("nav").css('background-color', 'black');
                     $("nav a").css('color', 'white');
-                    $("nav .dropdown-menu").css('background-color', 'black')
-                    $("nav .dropdown-menu").css('color', 'white')
+                    $("nav .dropdown-menu").css('background-color', 'black');
+                    $("nav .dropdown-menu").css('color', 'white');
                 }
             });
         });
