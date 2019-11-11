@@ -1,0 +1,31 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}Queen{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <h2 class="text-center">Queen 2020 Tour Dates</h2>
+  <div class="table-responsive">
+    <table class="table table-condensed">
+      <thead class="thead-dark">
+        <tr>
+          <th>Date</th>
+          <th>City</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+      {% for tour in data.tourdates %}
+      <tbody>
+        <tr>
+          <td>{{ tour.date }}</td>
+          <td>{{ tour.city }}</td>
+          <td>{{ tour.venue }}</td>
+        </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+{% endblock %}
