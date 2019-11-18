@@ -1,6 +1,6 @@
 .carousel-testing {
   width: 300px;
-  height: 360px;
+  height: 450px;
 
   .carousel-control-prev-icon, .carousel-control-next-icon {
     height: 35px;
@@ -11,7 +11,7 @@
     border-radius: 50%;
   }
   .carousel-control-prev, .carousel-control-next {
-    width: 37%;
+    width: 15%;
     height: 60%;
   }
   .carousel-caption {
@@ -25,5 +25,10 @@
    background-color: white;
    color: black;
   }
+}
+
+thead {
+  background-color: rgb(8, 8, 8);
+  color: white;
 }
 

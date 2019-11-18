@@ -49,12 +49,12 @@
     width: .5rem;
   }
   .overflow-auto::-webkit-scrollbar-thumb {
-    background-color: black;
-    border-radius: 5px;
+    background-color: $dark;
+    border-radius: 3px;
   }
   .overflow-auto::-webkit-scrollbar-track {
     background: $light;
-    border-radius: 5px
+    border-radius: 3px;
   }
 }
 
@@ -83,3 +83,4 @@
 #legal {
   margin-top: 20px;
 }
+
