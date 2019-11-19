@@ -68,13 +68,36 @@
   <div class="row">
     <div class="col-sm-6 col-md-4 left-content">
       <img src="img/members/roger-taylor-color.jpg" alt="band member" class="img-fluid band-member">
-      <h4 class="members-name">About Roger Taylor</h4>
-      <ul class="members-info">
-        <li class="members-info">Instruments: Drums, guitar, keyboards, vocals</li>
-        <li class="members-info">Tenure: (1970–present)</li>
-        <li class="members-info">Birthplace: King&#39;s Lynn, England</li>
-        <li class="members-info">Birthdate: 7/26/1949</li>
-      </ul>
+      
+      <div class="members-info text-center">
+        <h3 class="members-name">About Roger Taylor</h3>
+        <div class="tab">
+          <button class="tablinks" onclick="openInfo(event, 'Instruments')">Instruments</button>
+          <button class="tablinks" onclick="openInfo(event, 'Tenure')">Tenure</button>
+          <button class="tablinks" onclick="openInfo(event, 'Birthplace')">Birthplace</button>
+          <button class="tablinks" onclick="openInfo(event, 'Birthdate')">Birthdate</button>
+        </div>
+  
+        <div id="Instruments" class="tabcontent">
+          <h4>Instruments</h4>
+          <p>Drums, guitar, keyboards, vocals</p>
+        </div>
+  
+         <div id="Tenure" class="tabcontent" style="display:none">
+          <h4>Tenure</h4>
+          <p>(1970–present)</p>
+        </div>
+  
+        <div id="Birthplace" class="tabcontent" style="display:none">
+          <h4>Birthplace</h4>
+          <p>King&#39;s Lynn, England</p>
+        </div>
+  
+         <div id="Birthdate" class="tabcontent" style="display:none">
+          <h4>Birthdate</h4>
+          <p>7/26/1949</p>
+        </div>
+      </div>
     </div>
     <div class="col-sm-6 col-md-8">
       <h2>Roger Taylor</h2>
@@ -116,7 +139,26 @@
                 }
             });
         });
+    function openInfo(evt, infoName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
 
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the link that opened the tab
+      document.getElementById(infoName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
   </script>
 </body>
 </html>
