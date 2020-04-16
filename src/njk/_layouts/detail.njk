@@ -6,13 +6,42 @@
   <div class="row">
     <div class="col-sm-6 col-md-4 left-content">
       <img src="img/members/{{ members.image }}" alt="band member" class="img-fluid band-member">
-      <h4 class="members-name">About {{ members.name }}</h4>
+      {# <h4 class="members-name">About {{ members.name }}</h4>
       <ul class="members-info">
         <li class="members-info">Instruments: {{ members.instruments }}</li>
         <li class="members-info">Tenure: {{ members.tenure }}</li>
         <li class="members-info">Birthplace: {{ members.birthplace }}</li>
         <li class="members-info">Birthdate: {{ members.birthdate }}</li>
-      </ul>
+      </ul> #}
+      <div class="members-info text-center">
+        <h3 class="members-name">About {{ members.name }}</h3>
+        <div class="tab">
+          <button class="tablinks" onclick="openInfo(event, 'Instruments')">Instruments</button>
+          <button class="tablinks" onclick="openInfo(event, 'Tenure')">Tenure</button>
+          <button class="tablinks" onclick="openInfo(event, 'Birthplace')">Birthplace</button>
+          <button class="tablinks" onclick="openInfo(event, 'Birthdate')">Birthdate</button>
+        </div>
+  
+        <div id="Instruments" class="tabcontent">
+          <h4>Instruments</h4>
+          <p>{{ members.instruments }}</p>
+        </div>
+  
+         <div id="Tenure" class="tabcontent" style="display:none">
+          <h4>Tenure</h4>
+          <p>{{ members.tenure }}</p>
+        </div>
+  
+        <div id="Birthplace" class="tabcontent" style="display:none">
+          <h4>Birthplace</h4>
+          <p>{{ members.birthplace }}</p>
+        </div>
+  
+         <div id="Birthdate" class="tabcontent" style="display:none">
+          <h4>Birthdate</h4>
+          <p>{{ members.birthdate }}</p>
+        </div>
+      </div>
     </div>
     <div class="col-sm-6 col-md-8">
       <h2>{{ members.name }}</h2>

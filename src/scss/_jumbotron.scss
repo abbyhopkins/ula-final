@@ -1,10 +1,11 @@
 .jumbotron.banner {
-  background: url(../img/queen-band-wallpaper.jpg) no-repeat center center fixed;
+  background: url(../img/queen-band-wallpaper.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   min-height: 600px;
   color: white;
   padding-top: 16.5rem;
+  align-items: center;
 }
 
 .jumbotron {
